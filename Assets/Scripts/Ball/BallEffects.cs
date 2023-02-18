@@ -4,6 +4,13 @@ using UnityEngine;
 public class BallEffects : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _collisionParticlesPrefab;
+    
+    private ParticleSystem _collisionParticles;
+
+    private void Start() 
+    {
+        _collisionParticles = Instantiate(_collisionParticlesPrefab);
+    }
 
     private void OnCollisionEnter(Collision other)
     {
@@ -13,6 +20,8 @@ public class BallEffects : MonoBehaviour
     private void EmitCollisionParticles(Collision other)
     {
         Vector3 collisionPosition = other.contacts[0].point;
-        Instantiate(_collisionParticlesPrefab, collisionPosition, Quaternion.identity);
+        
+        _collisionParticles.transform.position = collisionPosition;
+        _collisionParticles.Play();
     }
 }
