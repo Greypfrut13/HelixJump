@@ -239,6 +239,7 @@ GameObject:
   - component: {fileID: 51824449}
   - component: {fileID: 51824448}
   - component: {fileID: 51824453}
+  - component: {fileID: 51824454}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -355,6 +356,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _collisionParticlesPrefab: {fileID: 4889717533243358558, guid: 9ac540f0320fcda4c9416104028d54ea,
     type: 3}
+--- !u!114 &51824454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51824447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d03f3b8e290209448cbaaaee0f9b72c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 51824448}
+  _bounceData:
+    _force: 4
+    _maxHeight: 4
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
