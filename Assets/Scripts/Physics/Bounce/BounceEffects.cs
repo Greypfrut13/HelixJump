@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BounceEffects : MonoBehaviour
+public class BounceEffects 
 {
     private readonly Rigidbody _rigidbody;
     private readonly BounceData _data;
@@ -19,7 +19,6 @@ public class BounceEffects : MonoBehaviour
     {
         if(_rigidbody.velocity.y <= 0)
         {
-            transform.localScale = initialScale;
             return;
         }
                   
