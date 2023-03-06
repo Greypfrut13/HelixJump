@@ -31,8 +31,8 @@ public class BallBounce : MonoBehaviour
         _bounceEffects.ApplyUpwardsScaleTo(_mesh, _meshInitialScale);
     }
 
-    private void OnCollisionEnter(Collision other) 
+    public void BounceOff(Vector3 direction)
     {
-        _bounce.BounceOff(Vector3.up);    
+        _bounce.BounceOff(direction);
     }
 }
