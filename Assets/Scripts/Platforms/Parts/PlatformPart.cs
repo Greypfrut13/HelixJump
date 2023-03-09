@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformPart : MonoBehaviour
+public abstract class PlatformPart : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void UnhookBy(EjectionSo ejection, Vector3 centerOfPlatform)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Rigidbody rigidbody = gameObject.AddComponent<Rigidbody>();
+        transform.ClearParent();
+        rigidbody.detectCollisions = false;
+        ejection.PushOut(rigidbody, centerOfPlatform);
     }
 }

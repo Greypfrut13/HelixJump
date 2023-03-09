@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private EjectionSo _ejection;
+    [SerializeField] private PlatformSettings _settings;
+    private PlatformPart[] _parts;
+
+    private void Start() 
     {
-        
+        _parts = GetComponentsInChildren<PlatformPart>();    
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UnhookAllParts()
     {
-        
+        foreach(PlatformPart platformPart in _parts)
+        {
+            platformPart.UnhookBy(_ejection, transform.position);
+            Destroy(platformPart.gameObject, _settings.DestroyDelayAfterUnhooking);
+        }
+
+        Destroy(gameObject, _settings.DestroyDelayAfterUnhooking);
     }
 }
