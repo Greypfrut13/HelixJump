@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformObstacle : MonoBehaviour
+public class PlatformPart : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
