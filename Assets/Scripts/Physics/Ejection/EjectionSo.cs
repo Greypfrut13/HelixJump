@@ -10,7 +10,7 @@ public class EjectionSo : ScriptableObject
 
     public void PushOut(Rigidbody rigidbody, Vector3 position)
     {
-        Vector3 forceDirection = (position - rigidbody.worldCenterOfMass).normalized;
+        Vector3 forceDirection = (rigidbody.worldCenterOfMass - position).normalized;
 
         Vector3 force = ScaleForce(forceDirection);
 
