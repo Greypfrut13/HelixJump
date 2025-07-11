@@ -7,6 +7,14 @@ namespace Ball
     {
         [SerializeField] private ParticleSystem _collisionParticlesPrefab;
         
+        private ParticleSystem _collisionParticles;
+
+        private void Start()
+        {
+            _collisionParticles = Instantiate(_collisionParticlesPrefab);
+            _collisionParticles.Stop();
+        }
+
         private void OnCollisionEnter(Collision other)
         {
             EmitCollisionParticles(other);
@@ -16,7 +24,8 @@ namespace Ball
         {
             Vector3 collisionPosition = other.contacts[0].point;
 
-            Instantiate(_collisionParticlesPrefab, collisionPosition, Quaternion.identity);
+            _collisionParticles.transform.position = collisionPosition;
+            _collisionParticles.Play();
         }
     }
 }
