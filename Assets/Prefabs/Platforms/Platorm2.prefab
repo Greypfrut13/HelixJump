@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2259928063023094498}
+  - component: {fileID: 3042248152506773444}
   m_Layer: 0
   m_Name: Platorm2
   m_TagString: Untagged
@@ -36,6 +37,18 @@ Transform:
   - {fileID: 4838379578237693026}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3042248152506773444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4122416421695334951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11dfb4ad746b4acca3bb60c52cb18fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4401495761959034561
 PrefabInstance:
   m_ObjectHideFlags: 0
