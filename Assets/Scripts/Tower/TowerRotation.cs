@@ -6,18 +6,23 @@ namespace Tower
     public class TowerRotation : MonoBehaviour
     {
         [SerializeField] [Min(0.0f)] private float _rotationSpeed;
-        [SerializeField] [Min(0.0f)] private float _angularDrag;
-        [SerializeField] private Rigidbody _rigidbody;
+        
+        private Quaternion _newRotationAngle;
 
-        private void OnValidate()
+        private void Update()
         {
-            _rigidbody.angularDamping = _angularDrag;
+            transform.rotation = CalculateRotation(_rotationSpeed * Time.deltaTime);
         }
 
-        public void Rotate(float xAxis)
+        private Quaternion CalculateRotation(float rotationSpeed)
         {
-            Vector3 torgue = Vector3.up * xAxis * _rotationSpeed * Time.deltaTime * -1;
-            _rigidbody.AddTorque(torgue, ForceMode.Acceleration);
+            return Quaternion.Slerp(transform.rotation, _newRotationAngle, rotationSpeed);
+        }
+
+        public void AddRotation(float xAxis)
+        {
+            Vector3 newEulerRotationAngle = transform.eulerAngles + Vector3.down * xAxis;
+            _newRotationAngle = Quaternion.Euler(newEulerRotationAngle);
         }
     }
 }
