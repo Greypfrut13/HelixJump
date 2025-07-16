@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b979e89912ccf1240be544851a229a4f, type: 3}
+  m_Name: TowerGeneretorSettings
+  m_EditorClassIdentifier: 
+  _platformVariantsCount: 20
+  _offsetBetweenPlatforms: 0.5
+  _rotationRange: {fileID: 11400000, guid: c115ef2148f781d408b53e07b7f2d531, type: 2}
+  _startPlatformPrefab: {fileID: -4040872079539505491, guid: 3aea3c50822c4bd4b9a22a928233e83f, type: 3}
+  _finishPlatformPrefab: {fileID: -4040872079539505491, guid: 790621f3029ecd549b947d5d368cb33a, type: 3}
+  _platformsVariantsPrefabs:
+  - {fileID: -4040872079539505491, guid: 1c15ebb692820f945954285ee157a685, type: 3}
+  - {fileID: -7342751897139581109, guid: 19bdfad8814d7e546b56dc9af10ed2c3, type: 3}
+  - {fileID: 3042248152506773444, guid: fcf14d1a793e93d4d99d8f3b9db9bbf4, type: 3}
+  - {fileID: 3196519540324795199, guid: a90879361e8c15c4791dd99f44d9791b, type: 3}
+  - {fileID: -5721136902811766497, guid: c2f6a82fc0b8dc141b522bef31c62527, type: 3}
