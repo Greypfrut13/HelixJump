@@ -19,10 +19,7 @@ namespace Physics
         public void ApplyUpwardsScaleTo(Transform transform, Vector3 initialScale)
         {
             if (_rigidbody.linearVelocity.y <= 0.0f)
-            {
-                transform.localScale = initialScale;
                 return;
-            }
 
             float percent = _rigidbody.linearVelocity.y / _data.MaxHeight;
 
