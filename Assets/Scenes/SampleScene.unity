@@ -422,6 +422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _platformsCount: 5
+  _spawnStep: 1
   _data:
     _towerBase: {fileID: 9068647761772225005, guid: a61b2da6edcc2434696e356fe4b0717f, type: 3}
     _startPlatform: {fileID: 7855259933943741073, guid: 260362112ff0eca408625b1c64dae733, type: 3}
